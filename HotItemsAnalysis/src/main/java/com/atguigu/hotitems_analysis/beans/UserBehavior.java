@@ -6,11 +6,11 @@ package com.atguigu.hotitems_analysis.beans;
  */
 public class UserBehavior {
     // 定义私有属性
-    private Long userId;
-    private Long itemId;
-    private Integer categoryId;
-    private String behavior;
-    private Long timestamp;
+    private Long userId;   // 用户ID
+    private Long itemId;   // 商品ID
+    private Integer categoryId; // 类别ID
+    private String behavior;  // 行为
+    private Long timestamp;  // 时间戳
 
     public UserBehavior() {
     }

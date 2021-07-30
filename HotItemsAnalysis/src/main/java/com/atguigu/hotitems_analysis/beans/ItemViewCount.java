@@ -5,7 +5,7 @@ package com.atguigu.hotitems_analysis.beans;
  * @Date 2021/7/22 2:55 下午
  */
 public class ItemViewCount {
-    private Long itemId;
+    private Long itemId;    //
     private Long windowEnd;
     private Long count;
 
