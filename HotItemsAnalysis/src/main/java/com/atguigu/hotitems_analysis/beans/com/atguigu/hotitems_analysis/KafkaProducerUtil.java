@@ -16,18 +16,19 @@ import java.util.Properties;
  * 批量的写入kafka脚本
  */
 public class KafkaProducerUtil {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         writeToKafka("hotitems");
     }
+
     // 包装一个写入kafka的方法
     private static void writeToKafka(String topic) throws IOException {
-// kafka 配置
+        // kafka 配置
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "localhost:9092");
         properties.setProperty("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         properties.setProperty("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
-// 定义一个Kafka Producer
+        // 定义一个Kafka Producer
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
         // 用缓冲方式读取文本
         BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/liuyang/IdeaProjects/UserBehaviorAnalysis/HotItemsAnalysis/src/main/resources/UserBehavior.csv"));
